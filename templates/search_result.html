@@ -1,0 +1,16 @@
+<h1>Search results for {{ search_term }}</h1>
+
+<!-- todo format neatly -->
+<div>{{ results }}</div>
+
+
+<h2>Press the save button to save these results</h2>
+<form method="POST" action="/save_bookmark">
+
+    <!-- todo you may need to unpack your results into more hidden inputs -->
+    
+    <input type="hidden" name="api_result_1" value="{{results.api_1_result}}">
+    <input type="hidden" name="api_result_2" value="{{results.api_2_result}}">
+    <input type="hidden" name="api_result_3" value="{{results.api_3_result}}">
+    <button type="submit">Save!</button>
+</form>
