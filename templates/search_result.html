@@ -3,14 +3,11 @@
 <!-- todo format neatly -->
 <div>{{ results }}</div>
 
-
 <h2>Press the save button to save these results</h2>
 <form method="POST" action="/save_bookmark">
-
-    <!-- todo you may need to unpack your results into more hidden inputs -->
-    
-    <input type="hidden" name="api_result_1" value="{{results.api_1_result}}">
-    <input type="hidden" name="api_result_2" value="{{results.api_2_result}}">
-    <input type="hidden" name="api_result_3" value="{{results.api_3_result}}">
+    <!-- include the unique result so the app 
+        can look up the full results in the store -->
+    <p>Bookmark your results?</p>
+    <input type="hidden" name="result_id" value="{{result_id}}">
     <button type="submit">Save!</button>
 </form>
